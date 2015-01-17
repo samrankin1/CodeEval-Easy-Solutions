@@ -59,13 +59,13 @@ public class Main {
 		return result.toString(); // return the resultant string
 	}
 
-	private static boolean isNumber(String string) {
+	private static boolean isNumber(String string) { // returns whether the string argument is a valid integer
 		try {
-			Integer.parseInt(string);
-		} catch (NumberFormatException e) {
-			return false;
+			Integer.parseInt(string); // attempt to parse the string as an integer
+		} catch (NumberFormatException e) { // if the string can't be parsed, catch the exception
+			return false; // the string is not an integer
 		}
 
-		return true;
+		return true; // if an exception wasn't thrown, the string is an integer
 	}
 }
